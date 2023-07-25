@@ -1,0 +1,20 @@
+@media (max-width: 500px) {
+  /* body {
+    display: none;
+  } */
+  .pokemons-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .pokemons-main .main-img {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .pokemons-main .main-img img {
+    width: 180px;
+  }
+  .pokemons-main .main-prev-card {
+    left: 0px;
+    transform: translate(-125%, -45%);
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>image gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/responsive.css"
+    />
+    <script type="module" defer src="/js/controller.js"></script>
+  </head>
+  <body class="gradient">
+    <nav class="navbar">
+      <h1>Pokedex</h1>
+      <ul class="items">
+        <li class="search-item">
+          <form class="search">
+            <input type="text" class="search-input hide" />
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </li>
+        <li class="compare-item">
+          <i class="fa-solid fa-code-compare"
+            ><span class="red-dot hidden"></span
+          ></i>
+        </li>
+        <li class="sort-item">
+          <i class="fa-solid fa-sort"></i>
+        </li>
+      </ul>
+    </nav>
+    <div class="pokemons-main hidden"></div>
+    <div class="overlay hidden"></div>
+    <div class="poke-cards"></div>
+    <div class="compare-container hidden"></div>
+    <div class="pagination">
+      <button class="pag-btn pag-prev">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <ul class="pag-ul"></ul>
+      <button class="pag-btn pag-next">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </body>
+</html>
