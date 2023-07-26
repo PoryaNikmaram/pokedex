@@ -81,4 +81,3 @@ export function sortCardsByID() {
     else return 0
   })
 }
-console.log(state.pokeCompare)

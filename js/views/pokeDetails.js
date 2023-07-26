@@ -2,7 +2,6 @@ import pokeView from './pokeView.js'
 
 class pokeDetails extends pokeView {
   _parentElement = document.querySelector('.pokemons-main')
-  _id
   _resultLength
 
   addEventHandler(handler) {
@@ -10,8 +9,6 @@ class pokeDetails extends pokeView {
       if (!e.target.closest('.card') || e.target.closest('.compare-btn')) return
 
       const { id } = e.target.closest('.card').querySelector('.poke-id').dataset
-
-      this._id = id
 
       handler(id)
     })
@@ -21,13 +18,17 @@ class pokeDetails extends pokeView {
     this._parentElement.addEventListener('click', (e) => {
       if (!e.target.closest('.main-controll-btn')) return
 
-      e.target.closest('.main-prev-card') && this._id !== 1
-        ? e.target.addEventListener('click', handler(Number(--this._id)))
-        : e.target.closest('.main-next-card') && this._id !== this._resultLength
-        ? e.target.addEventListener('click', handler(Number(++this._id)))
+      console.log(this._data.id)
+
+      e.target.closest('.main-prev-card') && this._data.id !== 1
+        ? e.target.addEventListener('click', handler(Number(--this._data.id)))
+        : e.target.closest('.main-next-card') &&
+          this._data.id !== this._resultLength
+        ? e.target.addEventListener('click', handler(Number(++this._data.id)))
         : null
     })
   }
+
   addDdetailCloseBtnHandler() {
     document.addEventListener('click', (e) => {
       if (

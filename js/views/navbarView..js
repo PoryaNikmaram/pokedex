@@ -10,7 +10,9 @@ class navbarView extends pokeView {
     this._sortItem.addEventListener('click', (e) => {
       e.target.closest('.sort-item').classList.toggle('id')
 
-      e.target.classList.contains('id') ? sortID() : sortName()
+      e.target.closest('.sort-item').classList.contains('id')
+        ? sortID()
+        : sortName()
     })
   }
 
